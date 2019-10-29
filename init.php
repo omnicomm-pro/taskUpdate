@@ -10,7 +10,7 @@ $Filter = [
 $Select = [
 	'FIELDS' => ['ID']
 ];
-$Users = CUser::GetList($by='ID', $order='ASC', $Filter, $Select);
+$Users = CUser::GetList($by, $order, $Filter, $Select); // если задать значения $by и $order, все элементы в админке будут отсортированы по ID по возрастанию
 while($user = $Users->Fetch()) {
 	$usersID[] = $user['ID'];
 }
